@@ -1,0 +1,58 @@
+// sass mixin frameWork
+
+@mixin table {
+    @media screen and (max-width:757px){
+        @content;
+    }
+};
+
+@mixin mobile {
+    @media screen and (max-width:380px){
+        @content;
+    }
+}
+
+@mixin bg-img($url) {
+    background: url($url) no-repeat  ;
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin overlay($z-index : -1,$bg-color,$rgp) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($bg-color , $alpha: $rgp);
+    z-index: $z-index;
+};
+
+// property prefixes
+@mixin prefixer($property ,$value ,$prefixes:() ) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property} : $value;
+    }
+    #{$property}:$value;
+};
+
+// animation key frefixes
+@mixin keyAninmation($keyName) {
+    $prefixList : $prefixes-list;
+    @each $var in $prefixList {
+        @-#{$var}-keyframes #{$keyName} {
+            @content;
+        }
+    }
+    @keyframes #{$keyName}{
+        @content;
+    }
+};
+
+// reSetting a(anchor)
+@mixin reSetting-a($size,$color) {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: $size;
+    color: $color;
+}

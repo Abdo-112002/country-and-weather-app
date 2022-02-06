@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Country Details</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    </head>
+    <body>
+        
+        <header class="header"><!-- start header -->
+            <div class="container">
+                <div class="row justify-content align-items">
+                    <div class="header__logo"><span class="header__logo--letter">t</span>he world</div>
+                    <div class="header__mode material-icons">dark_mode</div>
+                </div><!-- ./row -->
+            </div><!-- ./container -->
+        </header><!-- ./header -->
+
+        <section class="main-content">
+            <div class="main-loader">
+                <span class="loader1"></span>
+                <span class="loader2"></span>
+                <span class="loader3"></span>
+            </div>
+
+            <div class="container">
+                <div class="main-content__controll">
+                    <div class="row justify-content align-items">
+                        <div class="main-content__controll--search">
+                            <span class="material-icons">search</span>
+                            <input type="text" id="search" placeholder="Search for a country by the name">
+                        </div>
+                        <div class="main-content__controll--menu">
+                            <select id="country-list">
+                                <option>All</option>
+                                <option>Africa</option>
+                                <option>America</option>
+                                <option>Asia</option>
+                                <option>Europe</option>
+                                <option>Oceania</option>
+                            </select>
+                        </div>
+                    </div><!-- ./row -->
+               </div><!-- ./controll -->
+                <div class="row justify-content align-items " id="all-countrys"><!-- incloude all countrys in this row from Api -->
+                    <!-- <div class="main-content__item">
+                        <div class="main-content__item--box">
+                            <img src="Flag_of_the_Taliban.svg" alt="">
+                        </div>
+                        <div class="main-content__item--info">
+                            <h2 class="country-name">Egypt</h2>
+                            <h3>Population: <span>10203040</span></h3>
+                            <h3>Region: <span>Africa</span></h3>
+                            <h3>Capital: <span>Cairo</span></h3>
+                        </div>
+                    </div> -->
+
+                </div><!-- .row -->
+            </div><!-- ./container -->
+        </section><!-- ./main-content -->
+
+
+        <section class="PopUp-page">
+
+            <div class="PopUp-page__detalis-content">
+                <div class="info">
+                   <div class="info-name">
+                        <h3></h3>
+                        <p></p>
+                   </div>
+                   <span class="material-icons close">close</span>
+                </div><!-- ./info -->
+
+                <div class="more-info">
+                    <img src="" alt="" class="status-icon">
+                    <h3 class="tempF"></h3>
+                    <p class="status"></p>
+                </div>
+
+            </div><!-- ./PopUp-page__detalis -->
+
+        </section><!-- ./PopUp-page -->
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
